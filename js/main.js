@@ -42,7 +42,11 @@ let myFinalResult = document.querySelector('.finalResult')
 myFinalResult.addEventListener('click', ()=>{
     // console.log('kareem');
     // console.log(eval(myResult.value));
-    myResult.value = eval(myResult.value)
+    if (myResult.value !== "") {
+        myResult.value = eval(myResult.value)
+    } else {
+        myResult.value = ""
+    }
 })
 let myClear = document.querySelector('.clearAll');
 // console.log(myClear);
